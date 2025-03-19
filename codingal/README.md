@@ -2,7 +2,7 @@ This is the assessment for codingal front-end.
 
 
 
-Part 1 Requirements:
+Part 1 Requirements;
 
 1. Responsive navbar ✅
 
