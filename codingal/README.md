@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+This is the assessment for codingal front-end.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+Part 1 Requirements:
 
-### `npm start`
+1. Responsive navbar ✅
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Navbar component has both normal and mobile views
+Includes proper CSS to handle the layout changes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+2. Countdown timer starting at 10 minutes ✅
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In Navbar.jsx: const [timeRemaining, setTimeRemaining] = useState(10 * 60);
+Timer implemented with useEffect and setInterval
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. End Class button with modal ✅
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Modal appears when End Class is clicked
+Implemented in EndClassModal component
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+4. End Class functionality ✅
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Timer stops when End Class is confirmed: setIsTimerActive(false);
+Modal closes after confirmation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Cancel button functionality ✅
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Modal closes but timer continues running when Cancel is clicked
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6. Mobile responsive layout ✅
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+CSS classes and media queries handle responsiveness
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+7. Hamburger menu in mobile view ✅
 
-### Analyzing the Bundle Size
+Implemented with isMobileMenuOpen state and toggle function
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Part 2 Requirements:
 
-### Advanced Configuration
+1. Posts page in navigation bar ✅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Created at /posts/ route
+Link added to the navbar
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Posts from API ✅
 
-### `npm run build` fails to minify
+Fetches from jsonplaceholder.typicode.com/posts
+Handles pagination
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+3. Infinite scrolling ✅
+
+Implemented with Intersection Observer API
+Loads more content as user scrolls
+
+
+4. Loading indicator ✅
+
+Uses a Loader component during data fetching
+
+
+5. Loading 10 posts at once ✅
+
+API call includes limit=10 parameter
+
+
+6. Error handling ✅
+
+Try/catch blocks for API calls
+Error state display with retry option
