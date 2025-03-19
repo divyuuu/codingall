@@ -1,9 +1,9 @@
-// src/App.js
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Posts from './components/Posts/Posts';
-import './styles/global.css'; // Make sure this path is correct for your setup
+import './styles/global.css'; 
 
 const Home = () => (
   <div className="content" style={{ marginTop: "70px", padding: "20px" }}>

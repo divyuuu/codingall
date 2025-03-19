@@ -1,4 +1,3 @@
-    // src/components/Posts/Posts.jsx
     import React, { useState, useEffect, useRef } from 'react';
     import './Posts.css';
     import Loader from '../Loader/Loader';
@@ -11,7 +10,7 @@
     const [hasMore, setHasMore] = useState(true);
     const loaderRef = useRef(null);
 
-    // Function to fetch posts
+    
     const fetchPosts = async () => {
         if (loading || !hasMore) return;
         
@@ -25,13 +24,13 @@
         
         const newPosts = await response.json();
         
-        // If no more posts, set hasMore to false
+       
         if (newPosts.length === 0) {
             setHasMore(false);
             return;
         }
         
-        // Add new posts to existing posts
+       
         setPosts(prevPosts => [...prevPosts, ...newPosts]);
         setPage(prevPage => prevPage + 1);
         } catch (err) {
@@ -41,7 +40,7 @@
         }
     };
 
-    // Set up Intersection Observer for infinite scrolling
+    
     useEffect(() => {
         const observer = new IntersectionObserver(
         entries => {
@@ -56,7 +55,7 @@
         observer.observe(loaderRef.current);
         }
 
-        // Clean up observer
+      
         return () => {
         if (loaderRef.current) {
             observer.unobserve(loaderRef.current);

@@ -57,14 +57,14 @@
 }
 
 .sub-options.visible {
-    max-height: 200px; /* Adjust based on content */
+    max-height: 200px; 
 }
 
 .other-reason-input {
     width: 100%;
     padding: 5px;
     margin-top: 5px;
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical; 
 }
 
 .buttons-container {

@@ -1,4 +1,4 @@
-    /* src/components/Posts/Posts.css */
+
     .posts-container {
         max-width: 800px;
         margin: 80px auto 0;
@@ -68,7 +68,7 @@
         height: 20px;
     }
     
-    /* Animation for new posts */
+
     @keyframes fadeIn {
         from {
         opacity: 0;

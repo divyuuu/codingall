@@ -1,36 +1,34 @@
-    /* src/components/Navbar/Navbar.css */
-
-    /* Main navbar container */
+   
     .navbar {
         background-color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow */
-        position: fixed;  /* Keeps navbar at top of screen while scrolling */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+        position: fixed;  
         width: 100%;
         top: 0;
         left: 0;
-        z-index: 1000;  /* Ensures navbar appears above other content */
+        z-index: 1000;  
         font-family: Arial, sans-serif;
     }
     
-    /* Inner container for navbar content */
+    
     .navbar-container {
-        display: flex;  /* Enables flexbox layout */
-        justify-content: space-between;  /* Spaces items evenly */
-        align-items: center;  /* Centers items vertically */
+        display: flex; 
+        justify-content: space-between;  
+        align-items: center;  
         padding: 10px 20px;
         max-width: 1200px;
-        margin: 0 auto;  /* Centers the container horizontally */
+        margin: 0 auto;  
     }
     
-    /* Logo area styling */
+   
     .navbar-logo {
         display: flex;
         align-items: center;
     }
     
-    /* Container for the logo image/emoji */
+   
     .logo-container {
-        background-color: #ff6b6b;  /* Light red background */
+        background-color: #ff6b6b; 
         border-radius: 4px;
         width: 40px;
         height: 40px;
@@ -38,117 +36,115 @@
         align-items: center;
         justify-content: center;
         margin-right: 10px;
-        overflow: hidden;  /* Hides anything that goes outside the container */
+        overflow: hidden; 
     }
     
-    /* Logo image styling */
+   
     .logo-container img {
         width: 100%;
         height: 100%;
-        object-fit: contain;  /* Keeps image proportions */
+        object-fit: contain;  
     }
     
-    /* Brand name text styling */
+   
     .brand-name {
         font-size: 20px;
         font-weight: bold;
         color: #333;
     }
     
-    /* Center area of navbar */
+    
     .navbar-center {
-        flex-grow: 1;  /* Allows this section to grow and fill available space */
+        flex-grow: 1; 
         margin-left: 20px;
         text-align: left;
     }
     
-    /* Lesson title styling */
+  
     .lesson-title {
         font-size: 16px;
-        font-weight: 500;  /* Medium weight */
+        font-weight: 500;  
     }
     
-    /* Right area of navbar */
+    
     .navbar-right {
         display: flex;
         align-items: center;
-        gap: 20px;  /* Adds space between items */
+        gap: 20px;  
     }
     
-    /* Timer display styling */
+   
     .timer {
         font-size: 18px;
         font-weight: bold;
     }
     
-    /* End class button styling */
+    
     .end-class-btn {
-        background-color: lightcoral !important;  /* Light red button */
+        background-color: lightcoral !important;  
         color: white !important;
     }
     
-    /* End class button hover effect */
+   
     .navbar-right button.button:hover {
-        background-color: rgb(225, 43, 43) !important;  /* Darker red on hover */
+        background-color: rgb(225, 43, 43) !important; 
     }
     
-    /* Hamburger menu styling (hidden on desktop) */
+    
     .hamburger-menu {
-        display: none;  /* Hidden by default, shown on mobile */
+        display: none;  
         cursor: pointer;
         font-size: 24px;
     }
     
-    /* Mobile menu styling */
+    
     .mobile-menu {
-        display: none;  /* Hidden by default, shown on mobile when activated */
+        display: none;  
         background-color: white;
         padding: 10px 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
-    /* Individual mobile menu items */
+   
     .mobile-menu-item {
         padding: 12px 0;
-        border-bottom: 1px solid #eee;  /* Light gray border */
+        border-bottom: 1px solid #eee; 
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     
-    /* Mobile view styles - apply when screen width is 768px or less */
+    
     @media (max-width: 768px) {
-        /* Hide center section on mobile */
+       
         .navbar-center {
         display: none;
         }
         
-        /* Hide timer and end class button in the top bar on mobile */
+       
         .navbar-right .timer,
         .navbar-right .end-class-btn {
         display: none;
         }
         
-        /* Show hamburger menu on mobile */
+        
         .hamburger-menu {
         display: block;
         }
         
-        /* Show mobile menu when activated */
+        
         .mobile-menu {
         display: block;
         }
     }
 
-    /* Add this to src/components/Navbar/Navbar.css */
-
-    /* Navigation links container */
+    
     .nav-links {
         display: flex;
         margin-top: 8px;
     }
     
-    /* Individual navigation links */
+    
     .nav-link {
         color: #333;
         text-decoration: none;
@@ -177,7 +173,7 @@
         width: 100%;
     }
     
-    /* Mobile menu nav links */
+ 
     .mobile-menu .nav-link {
         display: block;
         padding: 5px 0;
