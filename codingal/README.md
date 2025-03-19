@@ -1,5 +1,6 @@
 This is the assessment for codingal front-end.
 
+Deployed Link: https://codingall-test-site.netlify.app/ (Ctrl + Click)
 
 
 Part 1 Requirements;
