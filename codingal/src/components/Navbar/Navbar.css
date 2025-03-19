@@ -1,0 +1,190 @@
+    /* src/components/Navbar/Navbar.css */
+
+    /* Main navbar container */
+    .navbar {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow */
+        position: fixed;  /* Keeps navbar at top of screen while scrolling */
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;  /* Ensures navbar appears above other content */
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Inner container for navbar content */
+    .navbar-container {
+        display: flex;  /* Enables flexbox layout */
+        justify-content: space-between;  /* Spaces items evenly */
+        align-items: center;  /* Centers items vertically */
+        padding: 10px 20px;
+        max-width: 1200px;
+        margin: 0 auto;  /* Centers the container horizontally */
+    }
+    
+    /* Logo area styling */
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Container for the logo image/emoji */
+    .logo-container {
+        background-color: #ff6b6b;  /* Light red background */
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        overflow: hidden;  /* Hides anything that goes outside the container */
+    }
+    
+    /* Logo image styling */
+    .logo-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;  /* Keeps image proportions */
+    }
+    
+    /* Brand name text styling */
+    .brand-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    /* Center area of navbar */
+    .navbar-center {
+        flex-grow: 1;  /* Allows this section to grow and fill available space */
+        margin-left: 20px;
+        text-align: left;
+    }
+    
+    /* Lesson title styling */
+    .lesson-title {
+        font-size: 16px;
+        font-weight: 500;  /* Medium weight */
+    }
+    
+    /* Right area of navbar */
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;  /* Adds space between items */
+    }
+    
+    /* Timer display styling */
+    .timer {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    /* End class button styling */
+    .end-class-btn {
+        background-color: lightcoral !important;  /* Light red button */
+        color: white !important;
+    }
+    
+    /* End class button hover effect */
+    .navbar-right button.button:hover {
+        background-color: rgb(225, 43, 43) !important;  /* Darker red on hover */
+    }
+    
+    /* Hamburger menu styling (hidden on desktop) */
+    .hamburger-menu {
+        display: none;  /* Hidden by default, shown on mobile */
+        cursor: pointer;
+        font-size: 24px;
+    }
+    
+    /* Mobile menu styling */
+    .mobile-menu {
+        display: none;  /* Hidden by default, shown on mobile when activated */
+        background-color: white;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Individual mobile menu items */
+    .mobile-menu-item {
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;  /* Light gray border */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Mobile view styles - apply when screen width is 768px or less */
+    @media (max-width: 768px) {
+        /* Hide center section on mobile */
+        .navbar-center {
+        display: none;
+        }
+        
+        /* Hide timer and end class button in the top bar on mobile */
+        .navbar-right .timer,
+        .navbar-right .end-class-btn {
+        display: none;
+        }
+        
+        /* Show hamburger menu on mobile */
+        .hamburger-menu {
+        display: block;
+        }
+        
+        /* Show mobile menu when activated */
+        .mobile-menu {
+        display: block;
+        }
+    }
+
+    /* Add this to src/components/Navbar/Navbar.css */
+
+    /* Navigation links container */
+    .nav-links {
+        display: flex;
+        margin-top: 8px;
+    }
+    
+    /* Individual navigation links */
+    .nav-link {
+        color: #333;
+        text-decoration: none;
+        margin-right: 15px;
+        position: relative;
+        padding: 2px 0;
+        transition: color 0.3s;
+    }
+    
+    .nav-link:hover {
+        color: #ff6b6b;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #ff6b6b;
+        transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    /* Mobile menu nav links */
+    .mobile-menu .nav-link {
+        display: block;
+        padding: 5px 0;
+    }
+    
+    @media (max-width: 768px) {
+        .nav-links {
+        display: none;
+        }
+    }

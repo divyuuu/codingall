@@ -1,0 +1,27 @@
+/* Add to your global.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 60px; /* Space for the navbar */
+}
+
+/* Ensure content is below navbar */
+@media (max-width: 768px) {
+  .content {
+    margin-top: 60px;
+  }
+}
